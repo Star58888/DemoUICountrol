@@ -24,11 +24,11 @@ public class RadioButtonEx extends AppCompatActivity {
         setListeners();
     }
     private void findViews() {
-        rg1 = (RadioGroup)findViewById(R.id.radioGroup);
-        rg2 = (RadioGroup)findViewById(R.id.radioGroup2);
-        rg3 = (RadioGroup)findViewById(R.id.radioGroup3);
-        submit = (Button)findViewById(R.id.submit);
-        result = (TextView)findViewById(R.id.result);
+        rg1 = findViewById(R.id.radioGroup);
+        rg2 = findViewById(R.id.radioGroup2);
+        rg3 = findViewById(R.id.radioGroup3);
+        submit = findViewById(R.id.submit);
+        result = findViewById(R.id.result);
     }
     private void setListeners() {
         submit.setOnClickListener(btnListener);
@@ -41,11 +41,11 @@ public class RadioButtonEx extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-            RadioButton rBtn = (RadioButton)findViewById(rg1.getCheckedRadioButtonId());
+            RadioButton rBtn = findViewById(rg1.getCheckedRadioButtonId());
 
-            RadioButton rBtn2 = (RadioButton)findViewById(rg2.getCheckedRadioButtonId());
+            RadioButton rBtn2 = findViewById(rg2.getCheckedRadioButtonId());
 
-            RadioButton rBtn3 = (RadioButton)findViewById(rg3.getCheckedRadioButtonId());
+            RadioButton rBtn3 = findViewById(rg3.getCheckedRadioButtonId());
 
             String text = "您對此次用餐感到 : "  + rBtn.getText() + "\n"  + "您的性別是 : " + rBtn2.getText()  + "\n" +
             "您的年齡是 : " + rBtn3.getText() ;
@@ -60,15 +60,20 @@ public class RadioButtonEx extends AppCompatActivity {
             int resId = group.getId();
             String groupName = getResources().getResourceEntryName(resId);
             String itemName = getResources().getResourceEntryName(checkedId);
-            RadioButton rBtn = (RadioButton)findViewById(checkedId);
-            RadioButton rBtn2 = (RadioButton)findViewById(checkedId);
-            RadioButton rBtn3 = (RadioButton)findViewById(checkedId);
+            RadioButton rBtn = findViewById(checkedId);
+            RadioButton rBtn2 = findViewById(checkedId);
+            RadioButton rBtn3 = findViewById(checkedId);
             String text = "";
+
+
+
             switch(resId) {
                 case R.id.radioGroup:
                     text = "您對此次用餐感到 : "  + rBtn.getText() + "\n";
+                    break;
                 case R.id.radioGroup2:
                     text = "您的性別是 : " + rBtn2.getText()  + "\n";
+                    break;
                 case R.id.radioGroup3:
                     text = "您的年齡是 : " + rBtn3.getText() ;
                     Toast.makeText(RadioButtonEx.this , groupName + " : " + itemName
