@@ -67,8 +67,10 @@ public class RadioButtonEx extends AppCompatActivity {
             switch(resId) {
                 case R.id.radioGroup:
                     text = "您對此次用餐感到 : "  + rBtn.getText() + "\n";
+                    break;
                 case R.id.radioGroup2:
                     text = "您的性別是 : " + rBtn2.getText()  + "\n";
+                    break;
                 case R.id.radioGroup3:
                     text = "您的年齡是 : " + rBtn3.getText() ;
                     Toast.makeText(RadioButtonEx.this , groupName + " : " + itemName
