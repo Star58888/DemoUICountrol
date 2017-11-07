@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DemoUICountrol</string>
+    <string name="title_activity_edit_text_ex">EditTextEx</string>
+    <string name="account">帳號</string>
+    <string name="password">密碼</string>
+
+
+    <string-array name="cards">
+        <item>VISA</item>
+        <item>MasterCard</item>
+        <item>JBC</item>
+        <item>HSBC</item>
+        <item>CitiBank</item>
+        <item>SD</item>
+    </string-array>
+</resources>
